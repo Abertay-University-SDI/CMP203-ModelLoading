@@ -16,6 +16,8 @@
 #include "SOIL.h"
 #include <vector>
 
+#include "model.h"
+
 
 class Scene{
 
@@ -54,6 +56,7 @@ protected:
 	char fps[40];
 	char mouseText[40];
 
+	Model my_model;
 };
 
 #endif
