@@ -9,7 +9,7 @@ Scene::Scene(Input *in)
 	initialiseOpenGL();
 
 	// Other OpenGL / render setting should be applied here.
-	if (my_model.load("Insert_Model_Filename_Here", "Insert_Texture_Filename_Here")) {
+	if (!my_model.load("Insert_Model_Filename_Here", "Insert_Texture_Filename_Here")) {
 		printf("Oh no. I can't load this file.");
 	}
 
@@ -41,7 +41,7 @@ void Scene::render() {
 	gluLookAt(0.0f, 0.0f, 6.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 	
 	// Render geometry/scene here -------------------------------------
-	
+
 	my_model.render();
 
 	// End render geometry --------------------------------------
